@@ -1,6 +1,8 @@
 import requests
 
-from settings import RECIPIENTS, NASA_API_KEY, MAILGUN_AUTH_TOKEN, MAILGUN_URL
+from settings import (
+    RECIPIENTS, NASA_API_KEY, MAILGUN_AUTH_TOKEN, MAILGUN_URL, SENDER
+)
 
 
 HTML_TEMPLATE = """
@@ -40,7 +42,7 @@ def send_apod_email():
             MAILGUN_URL,
             auth=("api", MAILGUN_AUTH_TOKEN),
             data={
-                "from": "Miskatonic Studio <contact@miskatonicstudio.com>",
+                "from": SENDER,
                 "to": recipient,
                 "subject": subject,
                 "html": html,

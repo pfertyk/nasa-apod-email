@@ -14,8 +14,9 @@ Clone this repository. Copy `setting-sample.py` to `settings.py` and set the
 values:
 * `MAILGUN_AUTH_TOKEN` copy the value from Mailgun API configuration
 * `MAILGUN_URL` copy the value from Mailgun API configuration
+* `SENDER` sender's name and email address (e.g. `John Doe <johndoe@example.com>`)
 * `RECIPIENTS` list of email addresses to which the APOD will be sent (same as authorized recipients in Mailgun)
-* `NASA_API_KEY` the default value of `DEMO_KEY` should do, but you can replace it with your own key (if you have one)
+* `NASA_API_KEY` the default value `DEMO_KEY` should do, but you can replace it with your own key (if you have one)
 
 To send a single email to all recipients:
 
